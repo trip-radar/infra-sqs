@@ -18,9 +18,6 @@ resource "aws_sqs_queue_policy" "tripradar-sqs-policy" {
             "sqs:GetQueueUrl",
             "sqs:ChangeMessageVisibility",
             "sqs:ReceiveMessageWaitTimeSeconds",
-            "sqs:SendMessageBatch",
-            "sqs:DeleteMessageBatch",
-            "sqs:ChangeMessageVisibilityBatch",
             "sqs:ListDeadLetterSourceQueues"
         ],
         "Resource": "${aws_sqs_queue.tripradar-sqs.arn}"
@@ -50,9 +47,6 @@ resource "aws_sqs_queue_policy" "tripradar-sqs-policy-dlq" {
             "sqs:GetQueueUrl",
             "sqs:ChangeMessageVisibility",
             "sqs:ReceiveMessageWaitTimeSeconds",
-            "sqs:SendMessageBatch",
-            "sqs:DeleteMessageBatch",
-            "sqs:ChangeMessageVisibilityBatch",
             "sqs:ListDeadLetterSourceQueues"
         ],
         "Resource": "${aws_sqs_queue.tripradar-sqs-dlq.arn}"
