@@ -25,5 +25,7 @@ resource "aws_sqs_queue" "tripradar-sqs-dlq" {
     deadLetterTargetArn = aws_sqs_queue.tripradar-sqs-dlq.arn
     maxReceiveCount = var.max_receive_count
   })
+  kms_master_key_id = aws_kms_alias.tripradar-kms-key.arn
+  kms_data_key_reuse_period_seconds = local.kms_data_key_reuse_period_seconds
 
 }
