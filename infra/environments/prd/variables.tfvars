@@ -1,6 +1,5 @@
 region                          = "sa-east-1"
 environment                     = "prd"
-state_bucket                    = "trip-radar-terraform-state"
 delay_seconds                   = 900
 max_message_size                = 262144
 message_retention_seconds       = 1209600

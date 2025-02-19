@@ -13,7 +13,8 @@ data "aws_iam_policy_document" "tripradar-sqs-policy" {
       "sqs:ReceiveMessage"
     ]
     resources = [
-      aws_sqs_queue.tripradar-sqs-queue.arn
+      aws_sqs_queue.tripradar-sqs-queue.arn,
+      aws_sqs_queue.tripradar-sqs-dlq.arn
     ]
   }
 }
