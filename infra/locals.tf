@@ -9,11 +9,7 @@ locals {
       "sqs:SendMessage",
       "sqs:GetQueueAttributes",
       "sqs:GetQueueUrl",
-      "sqs:ChangeMessageVisibility",
       "sqs:ReceiveMessageWaitTimeSeconds",
-      "sqs:SendMessageBatch",
-      "sqs:DeleteMessageBatch",
-      "sqs:ChangeMessageVisibilityBatch",
       "sqs:ListDeadLetterSourceQueues"
     ]
 }
