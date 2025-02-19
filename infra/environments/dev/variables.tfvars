@@ -1,5 +1,12 @@
-region                = "sa-east-1"
-environment           = "dev"
-state_bucket          = "trip-radar-terraform-state"
-nlb_endpoint          = "http://my-nlb-dev-1234567890.elb.amazonaws.com"
-subnet_ids            = ["subnet-07b9f22d91dbce12e", "subnet-0b0a0c30fc53298cf", "subnet-0a9bdbedc74d362f2"]
+region                          = "sa-east-1"
+environment                     = "dev"
+delay_seconds                   = 900
+max_message_size                = 262144
+message_retention_seconds       = 1209600
+receive_wait_time_seconds       = 20
+max_receive_count               = 1000
+visibility_timeout_seconds      = 43200
+delay_seconds_dlq               = 900
+message_retention_seconds_dlq   = 1209600
+receive_wait_time_seconds_dlq   = 20
+visibility_timeout_seconds_dlq  = 43200
