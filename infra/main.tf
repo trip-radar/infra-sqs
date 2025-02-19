@@ -30,3 +30,9 @@ resource "aws_sqs_queue_policy" "tripradar-sqs-policy" {
   queue_url = aws_sqs_queue.tripradar-sqs-queue.id
   policy    = data.aws_iam_policy_document.tripradar-sqs-policy.json
 }
+
+# https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/sqs_queue_policy
+resource "aws_sqs_queue_policy" "tripradar-sqs-dlq-policy" {
+  queue_url = aws_sqs_queue.tripradar-sqs-dlq.id
+  policy    = data.aws_iam_policy_document.tripradar-sqs-dlq-policy.json
+}
