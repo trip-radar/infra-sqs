@@ -9,7 +9,6 @@ locals {
       "sqs:SendMessage",
       "sqs:GetQueueAttributes",
       "sqs:GetQueueUrl",
-      "sqs:ReceiveMessageWaitTimeSeconds",
       "sqs:ListDeadLetterSourceQueues"
     ]
 }
